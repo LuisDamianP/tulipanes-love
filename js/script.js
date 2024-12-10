@@ -23,3 +23,10 @@ window.addEventListener('resize', () => {
     field.innerHTML = '';
     generateTulips();
 });
+
+window.addEventListener('load', () => {
+    const audio = document.getElementById('miCancion');
+    audio.play().catch((error) => {
+        console.log('La reproducción automática fue bloqueada.');
+    });
+});
